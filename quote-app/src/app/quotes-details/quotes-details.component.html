@@ -1,1 +1,11 @@
-<p>quotes-details works!</p>
+<div class="card-footer text-muted"></div>
+<button class="btn" style="color:red;" (click)="quoteDelete(true)">
+  <i class="fas fa-trash-alt"></i>
+  Delete
+</button>
+<button class="btn" (click)="downvote()">{{quote.downvotes}}
+  <i class="fas fa-thumbs-down"></i>
+</button>
+<button class="btn" (click)="upvote()">{{quote.upvotes}}
+  <i class="fas fa-thumbs-up"></i>
+</button>
