@@ -1,11 +1,12 @@
-<div class="card-footer text-muted"></div>
-<button class="btn" style="color:red;" (click)="quoteDelete(true)">
+<div>
+<button class="btn" style="color:red;" (click)="quoteDone(true)">
   <i class="fas fa-trash-alt"></i>
   Delete
 </button>
-<button class="btn" (click)="downvote()">{{quote.downvotes}}
+<button class="btn" (click)="downvote()">{{quote.thumbsDown}}
   <i class="fas fa-thumbs-down"></i>
 </button>
-<button class="btn" (click)="upvote()">{{quote.upvotes}}
+<button class="btn" (click)="upvote()">{{quote.thumbsUp}}
   <i class="fas fa-thumbs-up"></i>
 </button>
+</div>

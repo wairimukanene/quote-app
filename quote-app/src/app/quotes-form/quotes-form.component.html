@@ -7,19 +7,25 @@
       <div class="form-group">
 
           <label for="quote">Enter Your Quote:</label>
-          <input type="text" required class="form-control" id="quote">
+          <textarea class="form-control" id="quote" rows="4" [(ngModel)]="newPost.quote" name="quote" #quote="ngModel" required></textarea>
 
+          
       </div>
       <div class="form-group">
 
           <label for="author">Author of the quote:</label>
-          <textarea class="form-control" id="author" rows="4" required></textarea>
+          <input type="text" required class="form-control" id="author"[(ngModel)]="newPost.author" name="author" #author="ngModel" required>
 
+         
       </div>
       <div class="form-group">
-          <label for="author">Submitted by:</label>
-          <input type='text' id="name" required>
-
+          <label for="name">Submitted by:</label>
+          <input type='text' id="name"[(ngModel)]="newPost.name" name="name" #name="ngModel"  required>
       </div>
+      <div class="form-group">
+        <label for="todate">Enter Date:</label>
+        <input type='date' id="date"[(ngModel)]="newPost.postedDate" name="postedDate" #postedDate="ngModel"  required>
+    </div>
+      <button>Submit</button>
   </form>
 </div>

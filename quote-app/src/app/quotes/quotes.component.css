@@ -16,3 +16,21 @@ h1 {
   font-size: 50px;
   padding-top: 5%;
 }
+.card {
+  /*animates card elements*/
+  margin: 3%;
+  width: 20rem;
+  transform: translateY(-3px);
+  box-shadow: 0 4px 17px rgba(48, 6, 42, 0.35);
+  transition: all 0.3s ease-in-out;
+}
+.card:hover {
+  /* animates card motion on hover */
+  transform: translateY(-7px);
+}
+.cards {
+  /*allows for cards to append side by side*/
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 6%;
+}

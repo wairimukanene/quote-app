@@ -8,19 +8,22 @@ import{Quote} from '../quote';
 })
 export class QuotesDetailsComponent implements OnInit {
   @Input () quote:Quote;
-  @Output() deleteQuote = new EventEmitter <boolean>();
-  quoteDelete(deleteyes:boolean){
-    this.deleteQuote.emit(deleteyes);
-  }
-
-  constructor() { }
-
+  @Output() isComplete = new EventEmitter <boolean>();
+  // quoteDelete(deleteyes:boolean){
+  //   this.deleteQuote.emit(deleteyes);
+  // }
+  quoteDone(done:boolean){
+    this.isComplete.emit(done)
+  };
   upvote(){
-    this.quote.upvotes++;
+    this.quote.thumbsUp+=1;
   }
   downvote(){
-    this.quote.downvotes++;
+    this.quote.thumbsDown+=1;
   }
+  constructor() { }
+
+  
 
   ngOnInit(): void {
   }
