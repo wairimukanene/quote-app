@@ -3,7 +3,7 @@
       <h1 class= "text-center">Get Your Daily Inspiration @Wairimu's Crib</h1>
       <br>
       <ul *ngFor = 'let quote of quotes'>
-        <li>'{{quote.quote}}</li>
+        <li>{{quote.quote}}</li>
       </ul>
       <br>
         <p class="text-center" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; font-size:13px;"> BELIEVE IN YOURSELF , ALWAYS DO WHAT YOU LOVE BECAUSE AT THE END OF THE DAY ONLY YOU MATTERS!</p>
@@ -18,5 +18,8 @@
             <!-- <app-quotes-form (addQuotes)="addNewQuote($event)"></app-quotes-form> -->
         </div>
         <div class="col-sm-2"></div>
+        <div class="col-md-6">
+          <app-quotes-form></app-quotes-form>
+        </div>
         
       
