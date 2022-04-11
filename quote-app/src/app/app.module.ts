@@ -15,7 +15,8 @@ import { FormsModule } from '@angular/forms';
     QuotesComponent,
     HighlightQuoteDirective,
     QuotesDetailsComponent,
-    QuotesFormComponent
+    QuotesFormComponent,
+    
     
   ],
   imports: [
