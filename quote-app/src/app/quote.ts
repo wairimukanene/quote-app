@@ -13,4 +13,10 @@ export class Quote {
   this.upvotes=upvotes;
   this.downvotes=downvotes;
 }
+upvote(){
+  this.upvotes++
+}
+downvote(){
+  this.downvotes++
+}
 }
