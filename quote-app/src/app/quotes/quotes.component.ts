@@ -18,6 +18,12 @@ export class QuotesComponent implements OnInit {
 
   ]
 
+  //function for adding a new quote
+  addNewQuote(Quote:any) {
+       
+    this.quotes.push(Quote)
+  }
+
   constructor() { }
 
   ngOnInit(): void {
