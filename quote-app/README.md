@@ -1,6 +1,12 @@
-# QuoteApp
+# TABLE OF CONTENT
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.2.
+WebApplication-Quote app is a web application that uses angular to generate upvote ,downvote and delete quotes.
+installation-Requirement-One needs a phone,laptop or a desktop
+Technology-used-The technology used is Angular CLI to create the web application
+Reference-Angular,Lms and Youtube videos
+Author-information-Wairimu Kanene,mercykanene254@gmail.com
+Designer-information-Wairimu kanene
+
 
 ## Development server
 
