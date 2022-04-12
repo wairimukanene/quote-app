@@ -48,4 +48,4 @@ StackOverflow
 Youtube
 
 ## Author Name
-Mercy Wairimu K
+Mercy Wairimu Kanene
