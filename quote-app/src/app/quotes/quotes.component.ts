@@ -25,9 +25,7 @@ export class QuotesComponent implements OnInit {
     this.quotes.push(Quote)
   }
 
-  // toggleDetails(index:any){
-  //   this.quotes[index].isComplete =! this.quotes[index].showDetails;
-  // }
+  
 
   deletequotes(isComplete:any, index:any){
    if (isComplete){
