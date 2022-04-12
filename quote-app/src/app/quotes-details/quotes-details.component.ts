@@ -13,12 +13,12 @@ export class QuotesDetailsComponent implements OnInit {
   quoteDone(done:boolean){
     this.isComplete.emit(done)
   };
-  upvote(){
-    this.quote.thumbsUp+=1;
-  }
-  downvote(){
-    this.quote.thumbsDown+=1;
-  }
+  // upvote(){
+  //   this.quote.thumbsUp+=1;
+  // }
+  // downvote(){
+  //   this.quote.thumbsDown+=1;
+  // }
   constructor() { }
 
   
