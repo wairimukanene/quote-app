@@ -11,8 +11,9 @@
         <div class="card" *ngFor = 'let quote of quotes; let  i=index'>
         <p>{{quote.quote}}</p>  <br>
         <p>{{quote.author}}</p>
-        <p>{{quote.postedDate}}</p>
-        <app-quotes-details></app-quotes-details>
+        <p>{{quote.postedDate|date}}</p>
+        <button (click)='toggleDetails(i) '>Show Details</button>
+         <app-quotes-details   *ngIf ='quote.showDetails'   [quote] ='quote' (isComplete) = "deleteQuotes ($event, i)"></app-quotes-details>
         </div>
       </div>
     </div>
@@ -21,7 +22,7 @@
   <div>
       <h5 class="text-center" >ALWAYS SPEAK BLESSINGS AND MANIFESTATION INTO YOUR LIFE!</h5>
   </div>
-    <app-quotes-form></app-quotes-form>
+    <app-quotes-form (addedQuote)="submitForm ($event)"></app-quotes-form>
   </div>
         
       

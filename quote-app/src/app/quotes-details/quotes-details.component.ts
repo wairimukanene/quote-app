@@ -8,16 +8,18 @@ import{Quote} from '../quote';
 })
 export class QuotesDetailsComponent implements OnInit {
   @Input () quote:Quote;
+  thumbsUp = 0;
+  thumbsDown = 0;
   @Output() isComplete = new EventEmitter <boolean>();
   
   quoteDone(done:boolean){
     this.isComplete.emit(done)
   };
   upvote(){
-    this.quote.thumbsUp+=1;
+    this.thumbsUp++;
   }
   downvote(){
-    this.quote.thumbsDown+=1;
+    this.thumbsDown++;
   }
   constructor() { }
 
