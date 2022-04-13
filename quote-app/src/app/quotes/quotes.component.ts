@@ -7,10 +7,13 @@ import { Quote } from '../quote';
   styleUrls: ['./quotes.component.css']
 })
 export class QuotesComponent implements OnInit {
-  @Input()
+  @Input() quote:Quote;
+thumbsUp=0;
+thumbsDown=0;
   //quotes array
   quotes:Quote[] =[
     new Quote(1,'Dont stop Until you are proud','Myle Cyrus','Wairimu Kanene',new Date(2022,3,4)),
+    new Quote(1,'Dont stop Until you are proud','Myle Cyrus','Wairimu Kanene',new Date(2022,3,4),),
     new Quote(2,'Always be kind because everyone is fighting battles that we dont know about','Oprah Winfred','Margaret Mbaire',new Date(2022,6,2)),
     new Quote(3,'Music is better than people because it always stays when everyone leaves','Justin Bieber','Brian Muchiri',new Date(2022,8,12)),
     new Quote(4,'And when the sunrise we try again','Mandela Ndiba','Nancy Naisoi',new Date(2022,6,4)),
@@ -24,10 +27,20 @@ export class QuotesComponent implements OnInit {
   toggleDetails(index:any){
     this.quotes[index].showDetails=!this.quotes[index].showDetails;
   }
+  // function for adding a new quote
+  addNewQuote(y:any) {
+       let quoteslength=this.quotes.length;
+       y.id=quoteslength+1;
+       y.postedDate=new Date(y.postedDate)
+    this.quotes.push(y)
+     console.log(y.name);
+    
+
+   }
 
   deleteQuotes(isComplete:any, index:any){
    if (isComplete){
-      let toDelete=confirm('Are you sure you want to delete ${this.quote[index].name}?name}?')
+      let toDelete=confirm('Are you sure you want to delete')
       if (toDelete)
       this.quotes.splice(index,1);
       console.log('y')
@@ -44,6 +57,12 @@ export class QuotesComponent implements OnInit {
   }
  
   
+  upvote(){
+    this.thumbsUp++;
+  }
+  downvote(){
+    this.thumbsDown++;
+  }
 
 
   
