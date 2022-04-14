@@ -13,6 +13,7 @@
         <h3>Quote</h3>
         <p>{{quote.quote}}</p>
         <p>{{quote.author}}</p>
+        <p>{{quote.name}}</p>
         <p>{{quote.postedDate|date}}</p>
         <button (click)='toggleDetails(i) '>Show Details</button>
          <app-quotes-details   *ngIf ='quote.showDetails'   [quote] ='quote' (isComplete) = "deleteQuotes ($event, i)"></app-quotes-details>
